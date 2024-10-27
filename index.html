@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebP 图像转换工具</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="tailwindcss.js"></script>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">WebP 图像转换工具</h1>
+        <div class="space-y-4">
+            <div>
+                <label for="inputDir" class="block text-sm font-medium text-gray-700 mb-1">输入目录</label>
+                <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="text" id="inputDirPath" readonly class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-l-md text-sm border border-gray-300 bg-gray-50" placeholder="选择输入目录">
+                    <button id="inputDir" class="inline-flex items-center px-3 py-2 border border-l-0 border-gray-300 rounded-r-md bg-gray-50 text-gray-500 text-sm">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
+                            <path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <label for="outputDir" class="block text-sm font-medium text-gray-700 mb-1">输出目录</label>
+                <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="text" id="outputDirPath" readonly class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-l-md text-sm border border-gray-300 bg-gray-50" placeholder="选择输出目录">
+                    <button id="outputDir" class="inline-flex items-center px-3 py-2 border border-l-0 border-gray-300 rounded-r-md bg-gray-50 text-gray-500 text-sm">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
+                            <path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="text-xs text-center text-gray-600 mb-4">仅支持 jpg、png 格式的图像</p>
+            <button id="convertBtn" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-2 px-4 rounded-md flex items-center justify-center">
+                开始转换
+                <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="result" class="mt-6 text-center text-gray-600"></div>
+        <div class="mt-4 text-xs text-center text-gray-600">©2024 vosay.com</div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
