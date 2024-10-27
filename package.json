@@ -4,7 +4,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build --win --linux"
+    "build": "electron-builder build --win"
   },
   "keywords": [],
   "author": "voxsay.com",
