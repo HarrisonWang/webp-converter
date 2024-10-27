@@ -45,7 +45,8 @@
       {
         "provider": "github",
         "owner": "harrisonwang",
-        "repo": "webp-converter"
+        "repo": "webp-converter",
+        "releaseType": "release"
       }
     ]
   }
