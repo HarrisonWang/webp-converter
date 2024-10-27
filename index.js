@@ -2,13 +2,20 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
+// 获取命令行参数
+const args = process.argv.slice(2);
+
+if (args.length < 1) {
+  console.log('用法: node index.js <输入目录> [输出目录]');
+  process.exit(1);
+}
 // 输入目录路径
-const inputDir = "E:/Projects/ruby/voxsay.com/img";
-// 输出目录路径
-const outputDir = "E:/Projects/ruby/voxsay.com/img";
+const inputDir = args[0];
+// 输出目录路径（如果未提供，则默认为输入目录）
+const outputDir = args[1] || inputDir;
 
 // 确定实际的输出目录
-const actualOutputDir = outputDir.trim() === '' ? inputDir : outputDir;
+const actualOutputDir = outputDir;
 
 // 确保输出目录存在
 if (!fs.existsSync(actualOutputDir)) {
