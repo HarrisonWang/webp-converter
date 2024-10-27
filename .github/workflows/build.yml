@@ -1,9 +1,10 @@
 name: Build Desktop App
 
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+    push:
+      tags:
+        - 'v*.*.*'
+    workflow_dispatch:  
 
 jobs:
   build:
@@ -25,15 +26,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build Electron app
+    - name: Build and Publish Electron app
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         CSC_IDENTITY_AUTO_DISCOVERY: false
-      run: npm run build
-
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ matrix.os }}-build
-        path: dist/**
-        if-no-files-found: error
+      run: npm run build -- --publish always

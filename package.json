@@ -51,6 +51,13 @@
       "target": [
         "AppImage"
       ]
-    }
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "harrisonwang",
+        "repo": "webp-converter"
+      }
+    ]
   }
 }
