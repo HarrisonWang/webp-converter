@@ -15,6 +15,8 @@ function createWindow() {
     }
   });
 
+  win.setMenu(null);  // 添加这一行来移除菜单栏
+
   win.loadFile('index.html');
 }
 

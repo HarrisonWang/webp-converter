@@ -1,5 +1,7 @@
 # WebP 图像转换工具
 
+![效果图](mockup.webp)
+
 这是一个使用 Electron 构建的桌面应用程序，用于批量将 JPG 和 PNG 格式的图像转换为 WebP 格式。
 
 ## 功能
