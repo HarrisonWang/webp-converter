@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "voxsay.com",
-  "license": "ISC",
+  "license": "MIT",
   "description": "一款批量将 jpg、png 格式图像转换为 webp 格式的工具",
   "dependencies": {
     "color-name": "^2.0.0",
